@@ -30,8 +30,8 @@ function gradingStudents(grades) {
         // 반올림 조건
         if (roundNumber < 3) {
             return grade + roundNumber;
-            // 바로 출력
         } else {
+        // 바로 출력
             return grade;
         }
     });
