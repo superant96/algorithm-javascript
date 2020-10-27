@@ -1,2 +1,2 @@
 # algorithm-javascript
-Algorithm
+1 day 1 algorithm
