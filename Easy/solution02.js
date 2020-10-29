@@ -4,26 +4,21 @@
 */
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
-    let appleCount = 0;
-    let orangeCount = 0;
-    const applePassLength = s - a;
-    const orangesPassLength = t - b;
-
-    for (const apple of apples) {
-        // 미달된 사과들은 패스
-        if (apple < applePassLength) {
-            continue;
+    console.log(apples.filter((apple) => {
+        if (apple >= 1) {
+            let appleNumber = a + apple;
+            if (appleNumber >= s && appleNumber <= t) {
+                return apple;
+            }
         }
-        appleCount++;
-    }
+    }).length);
 
-    for (const orange of oranges) {
-        // 미달된 오렌지들은 패스
-        if (orange > orangesPassLength) {
-            continue;
+    console.log(oranges.filter((orange) => {
+        if (orange < 1) {
+            let orangeNumber = b + orange;
+            if (orangeNumber >= s && orangeNumber <= t) {
+                return orange;
+            }
         }
-        orangeCount++;
-    }
-    console.log(appleCount);
-    console.log(orangeCount);
+    }).length);
 }
